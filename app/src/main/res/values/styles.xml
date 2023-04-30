@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ========== Common Styles ========== -->
+    <style name="CircleShape">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- ========== Common Article Styles ========== -->
+    <style name="ArticleDate">
+        <item name="android:textSize">@dimen/article_date_text_size</item>
+        <item name="android:drawableStart">@drawable/ic_calendar</item>
+        <item name="android:drawablePadding">@dimen/article_date_drawable_padding</item>
+    </style>
+
+    <!-- ========== Article Item Styles ========== -->
+    <style name="ArticleItemTitle">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">start</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/item_article_title_text_size</item>
+    </style>
+
+    <style name="ArticleItemAuthors">
+        <item name="android:textSize">@dimen/item_article_author_text_size</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="ArticleItemArrow">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+
+    <!-- ========== Articles List Styles ========== -->
+    <style name="ArticlesListErrorMessage">
+        <item name="android:textSize">@dimen/articles_list_error_msg_text_size</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="ArticlesListEmptyMessage">
+        <item name="android:textSize">@dimen/articles_list_empty_msg_text_size</item>
+    </style>
+
+    <!-- ========== Article Details Styles ========== -->
+    <style name="ArticleDetailsTitle">
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">@dimen/article_details_name_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ArticleDetailsAuthors">
+        <item name="android:textSize">@dimen/article_details_authors_text_size</item>
+    </style>
+
+    <style name="ArticleDetailsContent">
+        <item name="android:textSize">@dimen/article_details_content_text_size</item>
+    </style>
+
+</resources>

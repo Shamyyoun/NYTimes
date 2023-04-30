@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/item_article_vertical_padding" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/item_article_vertical_padding" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/item_article_horizontal_padding" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/item_article_horizontal_padding" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_item_image"
+        android:layout_width="@dimen/item_article_image_size"
+        android:layout_height="@dimen/item_article_image_size"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/gl_bottom"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toTopOf="@id/gl_top"
+        app:shapeAppearanceOverlay="@style/CircleShape"
+        tools:src="@drawable/default_image" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_title"
+        style="@style/ArticleItemTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_article_texts_margin_start"
+        app:layout_constraintBottom_toTopOf="@+id/tv_item_authors"
+        app:layout_constraintEnd_toStartOf="@id/barrier_arrow"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_image"
+        app:layout_constraintTop_toTopOf="@+id/gl_top"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Don Lemon Ousted From CNN in Move That Left Him ‘Stunned’" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_authors"
+        style="@style/ArticleItemAuthors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_article_texts_margin_start"
+        android:layout_marginTop="@dimen/item_article_texts_margin_top"
+        app:layout_constraintBottom_toTopOf="@+id/tv_item_date"
+        app:layout_constraintEnd_toStartOf="@id/barrier_arrow"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_image"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+        tools:text="By MAHMOUD ELSHAMY and MAHMOUD ELSHAMY" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_item_date"
+        style="@style/ArticleDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/item_article_texts_margin_start"
+        android:layout_marginTop="@dimen/item_article_texts_margin_top"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_bottom"
+        app:layout_constraintEnd_toStartOf="@id/barrier_arrow"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_item_image"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_authors"
+        tools:text="2023-06-23" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="iv_arrow" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_arrow"
+        style="@style/ArticleItemArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_article_arrow_image_height"
+        android:layout_marginStart="@dimen/item_article_arrow_margin_start"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/gl_end"
+        app:layout_constraintStart_toEndOf="@+id/barrier_arrow"
+        app:layout_constraintTop_toTopOf="@+id/gl_top"
+        app:srcCompat="@drawable/ic_arrow_right" />
+</androidx.constraintlayout.widget.ConstraintLayout>

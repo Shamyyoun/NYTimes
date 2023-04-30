@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ========== Common Dimens ========== -->
+    <dimen name="toolbar_elevation">4dp</dimen>
+
+    <!-- ========== Article Item Dimens ========== -->
+    <dimen name="item_article_vertical_padding">22dp</dimen>
+    <dimen name="item_article_horizontal_padding">8dp</dimen>
+    <dimen name="item_article_image_size">70dp</dimen>
+    <dimen name="item_article_texts_margin_start">12dp</dimen>
+    <dimen name="item_article_texts_margin_top">8dp</dimen>
+    <dimen name="item_article_title_text_size">16sp</dimen>
+    <dimen name="item_article_author_text_size">14sp</dimen>
+    <dimen name="article_date_text_size">14sp</dimen>
+    <dimen name="article_date_drawable_padding">8dp</dimen>
+    <dimen name="item_article_arrow_image_height">20dp</dimen>
+    <dimen name="item_article_arrow_margin_start">16dp</dimen>
+
+    <!-- ========== Articles List Dimens ========== -->
+    <dimen name="articles_list_error_msg_text_size">16sp</dimen>
+    <dimen name="articles_list_empty_msg_text_size">16sp</dimen>
+
+    <!-- ========== Article Details Dimens ========== -->
+    <dimen name="article_details_padding">16dp</dimen>
+    <dimen name="article_details_name_text_size">16sp</dimen>
+    <dimen name="article_details_name_margin_top">12dp</dimen>
+    <dimen name="article_details_texts_spacing">12dp</dimen>
+    <dimen name="article_details_authors_text_size">14sp</dimen>
+    <dimen name="article_details_content_text_size">14sp</dimen>
+</resources>

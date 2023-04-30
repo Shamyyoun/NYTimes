@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NY Times</string>
+    <string name="ny_times_most_popular">NY Times Most Popular</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="article_details">Article Details</string>
+    <string name="no_articles_found">No articles found</string>
+    <string name="by_s">By %s</string>
+</resources>

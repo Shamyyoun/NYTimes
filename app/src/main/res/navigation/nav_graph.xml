@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="@string/ny_times_most_popular"
+    app:startDestination="@id/nav_articles_list">
+
+    <fragment
+        android:id="@+id/nav_articles_list"
+        android:name="com.mahmoudelshamy.nytimes.features.articles.presentation.articlesList.ArticlesListFragment"
+        tools:layout="@layout/fragment_articles_list">
+        <action
+            android:id="@+id/action_nav_articles_list_to_nav_article_details"
+            app:destination="@id/nav_article_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_article_details"
+        android:name="com.mahmoudelshamy.nytimes.features.articles.presentation.articleDetails.ArticleDetailsFragment"
+        tools:layout="@layout/fragment_article_details">
+        <argument
+            android:name="article"
+            app:argType="com.mahmoudelshamy.nytimes.features.articles.domain.models.Article" />
+    </fragment>
+</navigation>

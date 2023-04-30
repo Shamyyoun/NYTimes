@@ -1,0 +1,42 @@
+buildscript {
+    ext {
+        compileSdkVersion = 33
+        minSdkVersion = 21
+        targetSdkVersion = 33
+        versionCode = 1
+        versionName = '1.0.0'
+
+        androidXKtxVersion = '1.10.0'
+        appCompatVersion = '1.6.1'
+        materialVersion = '1.8.0'
+        constraintsLayoutVersion = '2.1.4'
+        archComponentsTestVersion = '2.2.0'
+        archComponentsVersion = '2.6.1'
+        hiltVersion = '2.45'
+        coroutinesVersion = '1.6.4'
+        retrofitVersion = '2.9.0'
+        okHttpVersion = '4.10.0'
+        navComponentVersion = '2.5.3'
+        coilVersion = '0.15.0'
+        powerMockitoVersion = '2.0.4'
+        mockitoKotlinVersion = '4.0.0'
+        turbineVersion = '0.7.0'
+        espressoVersion = '3.4.0'
+        jsonTestVersion = '20180813'
+    }
+
+    dependencies {
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navComponentVersion"
+    }
+}
+
+plugins {
+    id 'com.android.application' version '7.4.0' apply false
+    id 'com.android.library' version '7.4.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
