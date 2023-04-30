@@ -6,6 +6,7 @@ plugins {
     id 'androidx.navigation.safeargs'
     id 'kotlin-parcelize'
 }
+apply from: '../jacoco.gradle'
 
 android {
     compileSdk rootProject.compileSdkVersion
@@ -21,6 +22,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
