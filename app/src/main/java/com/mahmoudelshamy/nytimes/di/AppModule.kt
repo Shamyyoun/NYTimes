@@ -1,6 +1,6 @@
 package com.mahmoudelshamy.nytimes.di
 
-import com.mahmoudelshamy.nytimes.features.common.domain.Constants
+import com.mahmoudelshamy.nytimes.BuildConfig
 import com.mahmoudelshamy.nytimes.features.articles.data.remote.ArticlesApi
 import com.mahmoudelshamy.nytimes.features.articles.data.remote.interceptors.AuthInterceptor
 import com.mahmoudelshamy.nytimes.features.articles.data.repository.ArticlesRepositoryImpl
@@ -33,7 +33,7 @@ object AppModule {
     @Provides
     fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(Constants.END_POINT)
+            .baseUrl(BuildConfig.END_POINT)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
