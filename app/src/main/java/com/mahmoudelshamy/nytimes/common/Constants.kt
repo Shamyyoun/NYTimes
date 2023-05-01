@@ -1,4 +1,4 @@
-package com.mahmoudelshamy.nytimes.features.common.domain
+package com.mahmoudelshamy.nytimes.common
 
 object Constants {
     const val END_POINT = "https://api.nytimes.com/svc/"

@@ -1,4 +1,4 @@
-package com.mahmoudelshamy.nytimes.utils
+package com.mahmoudelshamy.nytimes.common
 
 /*
  *  Copyright 2017 Google Inc.

@@ -3,9 +3,9 @@ package com.mahmoudelshamy.nytimes.features.articles.presentation.articlesList
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.mahmoudelshamy.nytimes.features.common.domain.AppError
-import com.mahmoudelshamy.nytimes.features.common.domain.Result
-import com.mahmoudelshamy.nytimes.features.common.presentation.base.BaseViewModel
+import com.mahmoudelshamy.nytimes.common.AppError
+import com.mahmoudelshamy.nytimes.common.Resource
+import com.mahmoudelshamy.nytimes.core.BaseViewModel
 import com.mahmoudelshamy.nytimes.features.articles.domain.models.Article
 import com.mahmoudelshamy.nytimes.features.articles.domain.useCases.GetMostPopularArticlesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -34,15 +34,15 @@ class ArticlesListViewModel @Inject constructor(
     private fun fetchArticles() {
         getArticles().onEach {
             when (it) {
-                is Result.Loading -> _viewState.value = ArticlesListViewState.Loading
+                is Resource.Loading -> _viewState.value = ArticlesListViewState.Loading
 
-                is Result.Success -> _viewState.value = if (it.data.isNotEmpty()) {
+                is Resource.Success -> _viewState.value = if (it.data.isNotEmpty()) {
                     ArticlesListViewState.Articles(it.data)
                 } else {
                     ArticlesListViewState.Empty
                 }
 
-                is Result.Error -> _viewState.value = ArticlesListViewState.Error(
+                is Resource.Error -> _viewState.value = ArticlesListViewState.Error(
                     message = if (it.error is AppError.ApiErrorMessage) {
                         it.error.message
                     } else {

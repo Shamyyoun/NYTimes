@@ -1,6 +1,6 @@
 package com.mahmoudelshamy.nytimes.features.articles.data.remote.interceptors
 
-import com.mahmoudelshamy.nytimes.features.common.domain.Constants
+import com.mahmoudelshamy.nytimes.common.Constants
 import okhttp3.Interceptor
 import okhttp3.Response
 import javax.inject.Inject

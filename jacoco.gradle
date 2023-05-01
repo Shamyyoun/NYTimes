@@ -56,13 +56,11 @@ ext.excludes = [
         '**/*Extensions*.*',
         '**/hilt_aggregated_deps/*',
         '**/dagger/*',
-        'com/mahmoudelshamy/nytimes/NyTimesApp*',
-        'com/mahmoudelshamy/nytimes/di/*',
-        'com/mahmoudelshamy/nytimes/utils/*',
-        'com/mahmoudelshamy/nytimes/features/common/*',
         'com/mahmoudelshamy/nytimes/features/*/presentation/*',
         'com/mahmoudelshamy/nytimes/features/*/data/remote/dto/*',
-        'com/mahmoudelshamy/nytimes/features/*/data/remote/interceptors/*'
+        'com/mahmoudelshamy/nytimes/features/*/data/remote/interceptors/*',
+        'com/mahmoudelshamy/nytimes/common/*',
+        'com/mahmoudelshamy/nytimes/core/*',
 ]
 
 def createVariantCoverage(variant) {

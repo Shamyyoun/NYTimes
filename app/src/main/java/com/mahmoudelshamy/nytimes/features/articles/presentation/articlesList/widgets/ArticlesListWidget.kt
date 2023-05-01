@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mahmoudelshamy.nytimes.utils.extensions.inflater
+import com.mahmoudelshamy.nytimes.common.extensions.inflater
 import com.mahmoudelshamy.nytimes.databinding.WidgetArticlesListBinding
 import com.mahmoudelshamy.nytimes.features.articles.domain.models.Article
 

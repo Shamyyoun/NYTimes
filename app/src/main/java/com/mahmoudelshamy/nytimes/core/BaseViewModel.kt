@@ -1,10 +1,10 @@
-package com.mahmoudelshamy.nytimes.features.common.presentation.base
+package com.mahmoudelshamy.nytimes.core
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavDirections
-import com.mahmoudelshamy.nytimes.features.common.presentation.NavigationCommand
-import com.mahmoudelshamy.nytimes.utils.SingleLiveEvent
+import com.mahmoudelshamy.nytimes.common.NavigationCommand
+import com.mahmoudelshamy.nytimes.common.SingleLiveEvent
 
 abstract class BaseViewModel : ViewModel() {
     private val _navigation = SingleLiveEvent<NavigationCommand>()

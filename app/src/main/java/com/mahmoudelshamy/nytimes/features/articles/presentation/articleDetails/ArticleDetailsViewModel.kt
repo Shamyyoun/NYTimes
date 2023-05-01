@@ -2,7 +2,7 @@ package com.mahmoudelshamy.nytimes.features.articles.presentation.articleDetails
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.mahmoudelshamy.nytimes.features.common.presentation.base.BaseViewModel
+import com.mahmoudelshamy.nytimes.core.BaseViewModel
 import com.mahmoudelshamy.nytimes.features.articles.domain.models.Article
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

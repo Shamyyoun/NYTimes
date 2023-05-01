@@ -1,4 +1,4 @@
-package com.mahmoudelshamy.nytimes.utils.extensions
+package com.mahmoudelshamy.nytimes.common.extensions
 
 import android.content.Context
 import android.view.LayoutInflater
