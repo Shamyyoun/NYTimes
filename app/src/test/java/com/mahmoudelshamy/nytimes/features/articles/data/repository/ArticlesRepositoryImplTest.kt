@@ -1,6 +1,6 @@
 package com.mahmoudelshamy.nytimes.features.articles.data.repository
 
-import com.mahmoudelshamy.nytimes.features.common.domain.exceptions.ErrorResponseException
+import com.mahmoudelshamy.nytimes.common.exceptions.ErrorResponseException
 import com.mahmoudelshamy.nytimes.core.mockErrorResponse
 import com.mahmoudelshamy.nytimes.features.articles.data.remote.ArticlesApi
 import com.mahmoudelshamy.nytimes.features.articles.data.remote.dto.ArticleResult

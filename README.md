@@ -1,5 +1,11 @@
+
 # NY Times App
+
 A sample Android project to apply latest technologies and architectures in Android.
+
+
+
+
 
 ## Tech Stack
 * Clean architecture (Oninon architecture).

@@ -1,6 +1,6 @@
 package com.mahmoudelshamy.nytimes.features.articles.data.repository
 
-import com.mahmoudelshamy.nytimes.features.common.data.base.BaseRepository
+import com.mahmoudelshamy.nytimes.core.BaseRepository
 import com.mahmoudelshamy.nytimes.features.articles.data.remote.ArticlesApi
 import com.mahmoudelshamy.nytimes.features.articles.data.remote.dto.toArticle
 import com.mahmoudelshamy.nytimes.features.articles.domain.models.Article

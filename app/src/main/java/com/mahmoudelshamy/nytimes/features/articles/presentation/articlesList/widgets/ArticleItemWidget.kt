@@ -6,7 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isVisible
 import coil.load
 import com.mahmoudelshamy.nytimes.R
-import com.mahmoudelshamy.nytimes.utils.extensions.inflater
+import com.mahmoudelshamy.nytimes.common.extensions.inflater
 import com.mahmoudelshamy.nytimes.databinding.WidgetArticleBinding
 import com.mahmoudelshamy.nytimes.features.articles.domain.models.Article
 
