@@ -8,7 +8,7 @@ import androidx.test.espresso.contrib.RecyclerViewActions.actionOnItemAtPosition
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.mahmoudelshamy.nytimes.R
-import com.mahmoudelshamy.nytimes.core.MainActivity
+import com.mahmoudelshamy.nytimes.features.common.presentation.MainActivity
 import com.mahmoudelshamy.nytimes.di.AppModule
 import com.mahmoudelshamy.nytimes.features.articles.data.FakeArticlesData
 import com.mahmoudelshamy.nytimes.features.articles.data.remote.dto.ArticlesResponse

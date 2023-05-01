@@ -1,4 +1,4 @@
-package com.mahmoudelshamy.nytimes.common
+package com.mahmoudelshamy.nytimes.features.common.domain
 
 sealed class AppError {
     object GeneralError : AppError()

@@ -3,7 +3,7 @@ package com.mahmoudelshamy.nytimes.features.articles.presentation.articleDetails
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.fragment.app.viewModels
-import com.mahmoudelshamy.nytimes.core.BaseFragment
+import com.mahmoudelshamy.nytimes.features.common.presentation.base.BaseFragment
 import com.mahmoudelshamy.nytimes.databinding.FragmentArticleDetailsBinding
 import com.mahmoudelshamy.nytimes.features.articles.domain.models.Article
 import com.mahmoudelshamy.nytimes.features.articles.presentation.articleDetails.ArticleDetailsViewState.ArticleDetails

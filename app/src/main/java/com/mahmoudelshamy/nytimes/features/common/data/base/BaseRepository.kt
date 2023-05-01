@@ -1,7 +1,7 @@
-package com.mahmoudelshamy.nytimes.core
+package com.mahmoudelshamy.nytimes.features.common.data.base
 
-import com.mahmoudelshamy.nytimes.common.exceptions.ErrorResponseException
-import com.mahmoudelshamy.nytimes.common.exceptions.NoResponseException
+import com.mahmoudelshamy.nytimes.features.common.domain.exceptions.ErrorResponseException
+import com.mahmoudelshamy.nytimes.features.common.domain.exceptions.NoResponseException
 import org.json.JSONObject
 import retrofit2.Response
 import java.lang.Exception

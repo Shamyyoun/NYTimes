@@ -1,4 +1,4 @@
-package com.mahmoudelshamy.nytimes.core
+package com.mahmoudelshamy.nytimes
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
