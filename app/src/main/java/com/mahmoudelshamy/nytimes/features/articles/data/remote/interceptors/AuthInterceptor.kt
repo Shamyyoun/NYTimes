@@ -1,6 +1,6 @@
 package com.mahmoudelshamy.nytimes.features.articles.data.remote.interceptors
 
-import com.mahmoudelshamy.nytimes.features.common.domain.Constants
+import com.mahmoudelshamy.nytimes.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.Response
 import javax.inject.Inject
@@ -11,7 +11,7 @@ class AuthInterceptor @Inject constructor() : Interceptor {
         val request = chain.request()
         val newUrl = request.url
             .newBuilder()
-            .addQueryParameter("api-key", Constants.API_KEY)
+            .addQueryParameter("api-key", BuildConfig.API_KEY)
             .build()
 
         val newRequest = request.newBuilder().url(newUrl).build()
