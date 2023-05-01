@@ -1,6 +1,6 @@
 package com.mahmoudelshamy.nytimes.di
 
-import com.mahmoudelshamy.nytimes.common.Constants
+import com.mahmoudelshamy.nytimes.features.common.domain.Constants
 import com.mahmoudelshamy.nytimes.features.articles.data.remote.ArticlesApi
 import com.mahmoudelshamy.nytimes.features.articles.data.remote.interceptors.AuthInterceptor
 import com.mahmoudelshamy.nytimes.features.articles.data.repository.ArticlesRepositoryImpl

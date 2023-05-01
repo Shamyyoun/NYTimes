@@ -1,4 +1,4 @@
-package com.mahmoudelshamy.nytimes.core
+package com.mahmoudelshamy.nytimes.features.common.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
