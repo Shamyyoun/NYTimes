@@ -1,6 +1,6 @@
 package com.mahmoudelshamy.nytimes.features.articles.presentation.articlesList
 
-import com.mahmoudelshamy.nytimes.common.NavigationCommand
+import com.mahmoudelshamy.nytimes.features.common.presentation.NavigationCommand
 import com.mahmoudelshamy.nytimes.core.BaseAndroidTest
 import com.mahmoudelshamy.nytimes.di.AppModule
 import com.mahmoudelshamy.nytimes.features.articles.data.FakeArticlesData

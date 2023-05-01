@@ -1,14 +1,12 @@
 package com.mahmoudelshamy.nytimes.features.articles.domain.useCases
 
 import app.cash.turbine.test
-import com.mahmoudelshamy.nytimes.common.AppError
-import com.mahmoudelshamy.nytimes.common.Resource
-import com.mahmoudelshamy.nytimes.common.exceptions.ErrorResponseException
-import com.mahmoudelshamy.nytimes.features.articles.data.remote.dto.ArticleResult
+import com.mahmoudelshamy.nytimes.features.common.domain.AppError
+import com.mahmoudelshamy.nytimes.features.common.domain.Result
+import com.mahmoudelshamy.nytimes.features.common.domain.exceptions.ErrorResponseException
 import com.mahmoudelshamy.nytimes.features.articles.domain.models.Article
 import com.mahmoudelshamy.nytimes.features.articles.domain.repository.ArticlesRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -32,7 +30,7 @@ class GetMostPopularArticlesUseCaseTest {
         // Then
         flow.test {
             assertTrue(
-                awaitItem() is Resource.Loading
+                awaitItem() is Result.Loading
             )
 
             awaitItem()
@@ -56,13 +54,13 @@ class GetMostPopularArticlesUseCaseTest {
             // Then
             flow.test {
                 assertTrue(
-                    awaitItem() is Resource.Loading
+                    awaitItem() is Result.Loading
                 )
 
                 val successState = awaitItem()
-                assertTrue(successState is Resource.Success)
+                assertTrue(successState is Result.Success)
 
-                val emittedArticles = (successState as Resource.Success<List<Article>>).data
+                val emittedArticles = (successState as Result.Success<List<Article>>).data
                 assertTrue(emittedArticles.size == 2)
                 assertEquals("Article 1 title", emittedArticles[0].title)
                 assertEquals("Article 2 title", emittedArticles[1].title)
@@ -85,13 +83,13 @@ class GetMostPopularArticlesUseCaseTest {
             // Then
             flow.test {
                 assertTrue(
-                    awaitItem() is Resource.Loading
+                    awaitItem() is Result.Loading
                 )
 
                 val errorState = awaitItem()
-                assertTrue(errorState is Resource.Error)
+                assertTrue(errorState is Result.Error)
 
-                val appError = (errorState as Resource.Error).error
+                val appError = (errorState as Result.Error).error
                 assertTrue(appError is AppError.ApiErrorMessage)
 
                 val apiError = appError as AppError.ApiErrorMessage
@@ -115,13 +113,13 @@ class GetMostPopularArticlesUseCaseTest {
         // Then
         flow.test {
             assertTrue(
-                awaitItem() is Resource.Loading
+                awaitItem() is Result.Loading
             )
 
             val errorState = awaitItem()
-            assertTrue(errorState is Resource.Error)
+            assertTrue(errorState is Result.Error)
 
-            val appError = (errorState as Resource.Error).error
+            val appError = (errorState as Result.Error).error
             assertTrue(appError is AppError.NetworkError)
 
             awaitComplete()
@@ -141,13 +139,13 @@ class GetMostPopularArticlesUseCaseTest {
         // Then
         flow.test {
             assertTrue(
-                awaitItem() is Resource.Loading
+                awaitItem() is Result.Loading
             )
 
             val errorState = awaitItem()
-            assertTrue(errorState is Resource.Error)
+            assertTrue(errorState is Result.Error)
 
-            val appError = (errorState as Resource.Error).error
+            val appError = (errorState as Result.Error).error
             assertTrue(appError is AppError.GeneralError)
 
             awaitComplete()

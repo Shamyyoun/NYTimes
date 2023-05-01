@@ -132,10 +132,12 @@
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
                 <map>
+                  <entry key="23418ac92d017ece" value="120" />
                   <entry key="Copy_of_Resizable_Experimental_API_33" value="220" />
                   <entry key="Duration" value="190" />
                   <entry key="RF8N325RC2W" value="120" />
                   <entry key="Tests" value="785" />
+                  <entry key="samsung&#10; SM-G965F" value="120" />
                   <entry key="samsung&#10; SM-N770F" value="120" />
                 </map>
               </option>

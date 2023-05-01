@@ -1,4 +1,4 @@
-package com.mahmoudelshamy.nytimes.common
+package com.mahmoudelshamy.nytimes.features.common.presentation
 
 import androidx.navigation.NavDirections
 
